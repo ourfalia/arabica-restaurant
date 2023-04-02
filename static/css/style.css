@@ -1,0 +1,166 @@
+/*-------------------------------------colors */
+.bg-color-name-title {
+    background-color: rgb(80, 19, 19);
+}
+
+.bg-color-three-reasons {
+    background-color: white;
+}
+.ui-nav-colr-home {
+    background-color: rgb(109, 104, 104);
+}
+.ui-nav-colr-reservation {
+    background-color: rgb(236, 181, 60);
+}
+.ui-nav-colr-menu {
+    background-color: rgb(159, 189, 79);
+}
+.ui-nav-colr-contact {
+    background-color: rgb(44, 157, 233);
+}
+
+/*-------------------------------------headings */
+
+header {
+    margin: 0;
+}
+
+.heading {
+    margin-left: 50px;
+}
+
+.logo {
+    background: url("../images/dishes.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+
+}
+
+.name {
+    font-size: 46px;
+    margin-top: 50px;
+    color: beige;
+}
+
+.title {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    color: beige;
+}
+
+.list-inline-item:not(:last-child) {
+    margin: 0;
+}
+
+.nav-container {
+    font-size: 0;
+}
+
+#nav {
+    margin: 0;
+}
+
+#nav li {
+    font-size: 14px;
+    padding: 0;
+} 
+
+.menu-item {
+    height: 120px;
+    text-align: center;
+    padding: 0;
+}
+
+.menu-item a {
+    width: 100%;
+    text-decoration: none;
+    height: 120px;
+    color: white;
+}
+
+.menu-item a span {
+    padding-top: 20px;
+    display: block;
+    font-size: 26px;
+}
+/*-------------------------------------section */
+
+.row-table {
+    display: table;
+}
+.section-colomn {
+    display: table-cell;
+    padding: 0 30px 30px;
+    float: none;
+}
+
+.section-heading {
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.three-reasons-icon {
+    font-size: 26px;
+    color: brown;
+}
+
+.three-reasons-heading {
+    margin-bottom: 15px;
+}
+
+/*-------------------------------------special paddings/margins/text */
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+.general-sub {
+    color: rgb(83, 58, 46);
+}
+
+.inline-block {
+    display: inline-block;
+}
+/*-------------------------------------footer */
+
+footer {
+    background-color: antiquewhite;
+    color: brown;
+    min-height: 200px;
+    margin: 0;
+}
+
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: beige;
+    background: brown;
+    transition: all 0.53s ease-in-out;
+    -moz-transition: all 0.53s ease-in-out;
+    -webkit-transition: all 0.53s ease-in-out;
+    -o-transition: all 0.53s ease-in-out;
+
+}
+
+.social-links li a i:hover {
+    background: red;
+}
+
+#footer-details {
+    padding: 20px;
+}
+
+/*-------------------------------------footer */
+.reservation {
+    padding-bottom: 30px;
+}
