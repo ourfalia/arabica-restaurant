@@ -6,6 +6,7 @@ from reservation.models import Reservation
 
 # Create your views here.
 
+
 def reserve_table(request):
     reserve_form = ReserveTableForm()
 
@@ -19,7 +20,7 @@ def reserve_table(request):
     reserve_form = ReserveTableForm()
     context = {'form': reserve_form}
 
-    return render(request, '../templates/reservation.html', context)
+    return render(request, '../templates/book.html', context)
 
 
 def my_reservation(request):

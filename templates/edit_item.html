@@ -35,14 +35,29 @@
                       <a href="/home" class="hvr-sweep-to-bottom"><span>Home</span></a>
                     </li>
                     <li class="col-6 col-sm-3 ui-nav-colr-reservation list-inline-item menu-item">
-                      <a href="/reservation" class="hvr-sweep-to-bottom"><span>Reservation</span></a>
+                      <a href="/book" class="hvr-sweep-to-bottom"><span>Reservation</span></a>
                     </li>
                     <li class="col-6 col-sm-3 ui-nav-colr-menu list-inline-item menu-item">
-                      <a href="menu" class="hvr-sweep-to-bottom"><span>Menu</span></a>
+                      <a href="/menu" class="hvr-sweep-to-bottom"><span>Menu</span></a>
                     </li>
                     <li class="col-6 col-sm-3 ui-nav-colr-contact list-inline-item menu-item">
-                      <a href="contact" class="hvr-sweep-to-bottom"><span>Contact</span></a>
+                      <a href="/contact" class="hvr-sweep-to-bottom"><span>Contact</span></a>
                     </li>
+                    <li class="col-6 col-sm-3 ui-nav-colr-contact list-inline-item menu-item">
+                      <a href="/bookings" class="hvr-sweep-to-bottom"><span>My Reservation</span></a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="col-6 col-sm-3 ui-nav-colr-contact list-inline-item menu-item">
+                        <a href="{% url 'account_logout' %}" class="hvr-sweep-to-bottom"><span>Logout</span></a>
+                    </li>
+                    {% else %}
+                    <li class="col-6 col-sm-3 ui-nav-colr-contact list-inline-item menu-item">
+                        <a href="{% url 'account_signup' %}" class="hvr-sweep-to-bottom"><span>Register</span></a>
+                    </li>
+                    <li class="col-6 col-sm-3 ui-nav-colr-contact list-inline-item menu-item">
+                        <a href="{% url 'account_login' %}" class="hvr-sweep-to-bottom"><span>Login</span></a>
+                    </li>
+                    {% endif %}
                   </ul>
 
                 </div>
