@@ -5,6 +5,8 @@ from .forms import ReserveTableForm
 from reservation.models import Reservation
 
 # Create your views here.
+# return redirect(confirmation)
+# return redirect('confirmation')
 
 
 def reserve_table(request):
@@ -16,7 +18,7 @@ def reserve_table(request):
         if reserve_form.is_valid():
             reserve_form.save()
 
-            return redirect(confirmation)
+            return render(request, '../templates/confirmation.html')
     reserve_form = ReserveTableForm()
     context = {'form': reserve_form}
 
@@ -43,7 +45,7 @@ def edit_item(request, item_id):
         if reserve_form.is_valid():
             reserve_form.save()
 
-            return redirect('confirmation')
+            return render(request, '../templates/confirmation.html')
     reserve_form = ReserveTableForm(instance=item)
     context = {'form': reserve_form}
     return render(request, '../templates/edit_item.html', context)
