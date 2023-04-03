@@ -28,3 +28,7 @@ def my_reservation(request):
         'booking': booking
         }
     return render(request, '../templates/my_reservation.html', context)
+
+
+def confirmation(request):
+    return render(request, '../templates/confirmation.html')
