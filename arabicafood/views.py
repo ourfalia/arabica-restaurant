@@ -15,5 +15,5 @@ def go_to_contact(request):
     return render(request, '../templates/contact.html')
 
 
-def make_reservation(request):
-    return render(request, '../templates/reservation.html')
+# def make_reservation(request):
+#     return render(request, '../templates/reservation.html')
