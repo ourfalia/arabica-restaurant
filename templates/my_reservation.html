@@ -53,16 +53,38 @@
     </header>
 
     <section class="container-fluid">
-      <div>
-        <h1 class="section-heading">Book a table</h1>
-      </div>
-      <div class="reservation">
-        <form action="" method="POST">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit">submit</button>
-      </form>
-      </div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Number Of People</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+    
+            {% for item in booking %} 
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.phone }}</td>
+                    <td>{{ item.number_of_persons }}</td>
+                    <td>{{ item.date }}</td>
+                    <td>{{ item.time }}</td>
+                    <td>
+                        <a href="/edit/{{ item.id }}">
+                            <button>Edit</button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/cancel/{{ item.id }}">
+                            <button>Cancel Reservation</button>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <a href="/reservation"><button>New Reservation</button></a>
     </section>
 
     <footer>

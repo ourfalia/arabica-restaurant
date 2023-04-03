@@ -20,3 +20,11 @@ def reserve_table(request):
     context = {'form': reserve_form}
 
     return render(request, '../templates/reservation.html', context)
+
+
+def my_reservation(request):
+    booking = Reservation.objects.all()
+    context = {
+        'booking': booking
+        }
+    return render(request, '../templates/my_reservation.html', context)
