@@ -24,6 +24,7 @@ The website consist of a main page and several sub pages. On the main page, ther
 Manual testing of all the features of the website was deploied and everything looks fuctioning such as the navigation bar and links. However, the reservation system is still not functioning properly. 
 ## Unfixed bugs 
 The reservation system is not working due to insufficient time to finish the code.
+The style for some parts of the website is not completed because of time ristriction.
 
 ## Deployment 
 The site was deployed to Heroku website. 
