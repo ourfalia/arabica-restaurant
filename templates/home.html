@@ -46,6 +46,18 @@
                     <li class="col-6 col-sm-3 ui-nav-colr-contact list-inline-item menu-item">
                       <a href="/bookings" class="hvr-sweep-to-bottom"><span>My Reservation</span></a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="col-6 col-sm-3 ui-nav-colr-contact list-inline-item menu-item">
+                        <a href="{% url 'account_logout' %}" class="hvr-sweep-to-bottom"><span>Logout</span></a>
+                    </li>
+                    {% else %}
+                    <li class="col-6 col-sm-3 ui-nav-colr-contact list-inline-item menu-item">
+                        <a href="{% url 'account_signup' %}" class="hvr-sweep-to-bottom"><span>Register</span></a>
+                    </li>
+                    <li class="col-6 col-sm-3 ui-nav-colr-contact list-inline-item menu-item">
+                        <a href="{% url 'account_login' %}" class="hvr-sweep-to-bottom"><span>Login</span></a>
+                    </li>
+                    {% endif %}
                   </ul>
 
                 </div>
