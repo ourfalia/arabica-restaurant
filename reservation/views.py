@@ -46,3 +46,13 @@ def edit_item(request, item_id):
     reserve_form = ReserveTableForm(instance=item)
     context = {'form': reserve_form}
     return render(request, '../templates/edit_item.html', context)
+
+
+def cancel_item(request, item_id):
+    item = get_object_or_404(Reservation, id=item_id)
+    item.delete()
+    return redirect('cancelation')
+
+
+def cancelation(request):
+    return render(request, '../templates/cancelation.html')
